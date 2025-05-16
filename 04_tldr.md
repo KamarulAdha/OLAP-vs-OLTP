@@ -1,5 +1,28 @@
 # OLAP vs OLTP: TLDR
 
+## Quick Comparison Table
+
+| Feature | OLTP | OLAP |
+|---------|------|------|
+| Full Name | Online Transaction Processing | Online Analytical Processing |
+| Purpose | Records business operations | Understands business performance |
+| Data Model | Highly normalized | Partially denormalized |
+| Schema | Entity-Relationship | Star or Snowflake |
+| Optimized For | Write operations | Read operations |
+| Query Type | Many simple transactions | Few complex queries |
+| Response Time | Milliseconds | Seconds to minutes |
+| Data Size | Gigabytes | Terabytes/Petabytes |
+| Users | Thousands (clerks, customers) | Hundreds (analysts, executives) |
+| Examples | PostgreSQL, MySQL, Oracle | Redshift, BigQuery, Snowflake |
+
+## Cloud Provider Offerings
+
+| Cloud Provider | OLTP Options | OLAP Options |
+|----------------|--------------|--------------|
+| **AWS** | • RDS (PostgreSQL, MySQL, SQL Server, Oracle) <br>• Aurora (MySQL/PostgreSQL compatible) <br>• DynamoDB (NoSQL) <br>• DocumentDB (MongoDB compatible) | • Redshift (data warehouse) <br>• Athena (query service) <br>• S3 (data lake storage) <br>• Lake Formation (data lake) <br>• Glue (ETL service) |
+| **Azure** | • Azure SQL Database <br>• Azure Database for MySQL <br>• Azure Database for PostgreSQL <br>• Azure Cosmos DB (NoSQL) | • Azure Synapse Analytics (data warehouse) <br>• Azure Data Lake Storage <br>• Azure Analysis Services <br>• Azure Databricks (lakehouse) <br>• Azure Data Factory (ETL) |
+| **GCP** | • Cloud SQL (PostgreSQL, MySQL, SQL Server) <br>• Cloud Spanner (globally distributed) <br>• Firestore (NoSQL) <br>• Bigtable (NoSQL) | • BigQuery (data warehouse) <br>• Cloud Storage (data lake) <br>• Dataflow (ETL) <br>• Looker (BI) <br>• Dataproc (Hadoop/Spark) |
+
 ## OLTP (Online Transaction Processing)
 
 * **OLTP** stands for **Online Transaction Processing**
